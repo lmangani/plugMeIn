@@ -1,5 +1,4 @@
 /* globals console, Map, module */
-const util = require('util')
 const plug = require('zephyr');
 
 // valueOf convert items being worked on this is mostly important because

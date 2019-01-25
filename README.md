@@ -25,6 +25,17 @@ plugMeIn()
 
 ## Plug Functions
 PlugMeIn supports function injection from local or remote (npm) modules
+#### Module Export
+```
+module.exports = function plugin() {
+  this.chain = function() {
+    // return this to allow chaining on this function
+    return this;
+  }
+}
+```
+
+### Module Import
 ```javascript
 // Initialize
 var plugmein = require('plugmein');
@@ -37,5 +48,5 @@ plugmein().myFunc()
 ```
 
 
-### Why Forking?
-This version is modified to work within [paStash](https://github.com/sipcapture/pastash). Assuming we don't drift too far off, we'll propose changes back to Aggro whenever mature.
+###### Why Forking?
+This version will be heavily modified to work within [paStash](https://github.com/sipcapture/pastash). Assuming we don't drift too far off, we'll propose changes back to Aggro whenever mature.

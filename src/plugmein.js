@@ -109,6 +109,7 @@ module.exports = function Plugmein () {
 
   function plugmein (data) {
     // run filters
+    if (!Array.isArray(data) && typeof data === 'object') { data = [data]; }
     let retdata = data
       .filter(d => {
         for (let fi = 0; fi < filters.length; fi++) {

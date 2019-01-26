@@ -1,6 +1,8 @@
 var plugmein = require('../src/plugmein');
 plugmein = plugmein().plug([require('./pp_chain.js')]);
 
+if (!plugmein().chain) { console.log('FAILED IMPORTING!'); return; }
+
 const population = [
   { "sex": "male", "age": 35, "eyes": "brown" },
   { "sex": "female", "age": 38, "eyes": "brown" },
